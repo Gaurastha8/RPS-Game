@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Smart Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title-section">
+      <p class="title">Rock Paper Scissors</p>
+      <p class="subtitle">with Adaptive AI</p>
+    </div>
+
+    <!-- AI Settings -->
+    <div class="ai-settings">
+      <div class="ai-toggle">
+        <span>AI Opponent: </span>
+        <label class="switch">
+          <input type="checkbox" id="ai-toggle-switch" checked>
+          <span class="slider round"></span>
+        </label>
+        <span id="ai-status">ON</span>
+      </div>
+
+      <div class="difficulty-settings" id="difficulty-container">
+        <p>Difficulty Level:</p>
+        <div class="difficulty-buttons">
+          <button id="easy-btn" class="active">Easy</button>
+          <button id="medium-btn">Medium</button>
+          <button id="hard-btn">Hard</button>
+        </div>
+        <div class="confidence-display">
+          <span>Pattern recognition: </span>
+          <span id="confidence-level">Analyzing...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Buttons -->
+    <div class="buttons">
+      <button id="rock-btn" class="move-button">
+        <img src="Images/rock-emoji.png" class="move-icon" alt="Rock">
+      </button>
+
+      <button id="paper-btn" class="move-button">
+        <img src="Images/paper-emoji.png" class="move-icon" alt="Paper">
+      </button>
+
+      <button id="scissors-btn" class="move-button">
+        <img src="Images/scissors-emoji.png" class="move-icon" alt="Scissors">
+      </button>
+    </div>
+
+    <!-- Game Results -->
+    <div class="game-results">
+      <p id="result-text" class="result">Choose your move!</p>
+      <div class="versus-display">
+        <div class="player-move">
+          <p>You</p>
+          <div class="move-display" id="player-move-display"></div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="computer-move">
+          <p>Computer</p>
+          <div class="move-display" id="computer-move-display"></div>
+        </div>
+      </div>
+      <div class="score-grid">
+        <div class="score-box">
+          <p>Wins</p>
+          <p id="wins-count" class="win-color">0</p>
+        </div>
+        <div class="score-box">
+          <p>Ties</p>
+          <p id="ties-count" class="tie-color">0</p>
+        </div>
+        <div class="score-box">
+          <p>Losses</p>
+          <p id="losses-count" class="loss-color">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pattern Analysis -->
+    <div class="pattern-analysis">
+      <h3>Your Move History</h3>
+      <div class="move-history" id="move-history">
+        <p class="empty-history">No moves yet</p>
+      </div>
+
+      <div class="pattern-stats">
+        <h4>Pattern Analysis</h4>
+        <div class="patterns-grid">
+          <div class="pattern-box">
+            <p>Rock</p>
+            <div class="meter">
+              <div id="rock-meter" class="meter-fill" style="width: 33%"></div>
+            </div>
+            <p id="rock-percent">33%</p>
+          </div>
+          <div class="pattern-box">
+            <p>Paper</p>
+            <div class="meter">
+              <div id="paper-meter" class="meter-fill" style="width: 33%"></div>
+            </div>
+            <p id="paper-percent">33%</p>
+          </div>
+          <div class="pattern-box">
+            <p>Scissors</p>
+            <div class="meter">
+              <div id="scissors-meter" class="meter-fill" style="width: 33%"></div>
+            </div>
+            <p id="scissors-percent">33%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reset Button -->
+    <div class="reset">
+      <button id="reset-btn" class="reset-button">Reset Game</button>
+    </div>
+
+    <!-- Footer -->
+    <a href="https://www.linkedin.com/in/astha-gaur-356300284/" id="tag">
+      <div class="built">
+        <span>Built by Astha Gaur</span>
+      </div>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
